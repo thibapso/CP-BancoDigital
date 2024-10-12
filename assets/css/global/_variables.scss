@@ -1,0 +1,38 @@
+/* ___ Fonts ___ */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+$font: 'Quicksand',
+'Calibri',
+'sans-serif';
+
+$thin: 100;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+
+/* ___ Colors ___ */
+$primaria1: #FDAD4C;
+$primaria2: #54C0FF;
+
+$secundaria1: #FBF388;
+$secundaria2: #70D8FF;
+
+$cinza1: #EDEDED;
+$cinza2: #B8BCBF;
+
+$preto: #000000;
+
+/* ___ Media Query ___ */
+@mixin MQ($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+$XS: 500px;
+$S: 770px;
+$M: 960px;
+$L: 1024px;
+$XL: 1130px;
