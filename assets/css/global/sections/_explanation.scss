@@ -10,12 +10,12 @@
     justify-content: space-between;
     align-items: center;
     width: 75%;
+  }
 
-    h2 {
-      font-weight: $bold;
-      font-size: 4.5rem;
-      margin-bottom: 2rem;
-    }
+  &__title {
+    font-weight: $bold;
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
   }
 
   &__paragraph {
@@ -35,12 +35,25 @@
 
   &__miguel {
     display: flex;
-    gap: 10rem;
+    gap: 5rem;
+  }
 
-    img {
-      height: 40rem;
-      width: 38rem;
-    }
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cofre {
+    margin: 5rem;
+    height: 22rem;
+    width: 30rem;
+  }
+
+  &__menino {
+    align-items: center;
+    height: 40rem;
+    width: 38rem;
+    padding-top: 4rem;
   }
 
   &__bar {
@@ -61,14 +74,39 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   &__bar ul div {
     display: flex;
   }
 
+  &__bar ul li {
+    font-size: 1.5rem;
+    font-weight: $bold;
+  }
+
   &__bar i {
     margin-right: 0.5rem;
+    font-size: 1.7rem;
   }
+
+  &__bar img {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  &__conta {
+    font-size: 4.5rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  &__gratuita {
+    font-weight: $bold;
+  }
+}
+
+.bold {
+  font-weight: $bold;
 }

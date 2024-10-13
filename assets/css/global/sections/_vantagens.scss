@@ -1,0 +1,76 @@
+.vantagens {
+  background-color: $primaria2;
+  display: flex;
+  justify-content: center;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+    gap: 7.75rem;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 5rem 0;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    font-weight: $bold;
+    width: 37rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Duas colunas
+    grid-template-rows: auto auto; // Duas linhas
+    gap: 2rem; // Espaçamento entre os cards
+    width: 100%; // Para ocupar toda a largura disponível
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    border-radius: 1rem;
+    border: 2px solid #e8e8e8;
+    padding: 2rem;
+    font-weight: $bold;
+    height: 11rem;
+    width: 13rem;
+
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+
+  &__mensage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: $primaria1;
+    width: 37.5rem;
+    height: 2.375rem;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-size: 1.5rem;
+  }
+}
+
+.icon {
+  font-size: 1.85rem;
+  font-weight: $light;
+  color: $primaria2;
+  background-color: #ffffff;
+  border-radius: 6.25rem;
+  padding: 0.5rem;
+  width: 1.8rem;
+}
