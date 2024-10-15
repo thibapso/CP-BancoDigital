@@ -1,0 +1,33 @@
+.cartoes {
+  text-align: center;
+  margin-top: 40px;
+
+  h2 {
+    font-size: 4.5rem;
+    font-weight: $bold;
+    margin: 1rem 0;
+  }
+
+  p {
+    font-size: 1.75rem;
+    margin: 2rem 0;
+    width: auto;
+  }
+}
+
+.cartoes__images {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+
+  img {
+    width: 24rem;
+    height: 14rem;
+    transition: all 0.5s ease-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-out;
+  }
+}

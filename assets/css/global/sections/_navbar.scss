@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font;
 }
@@ -6,14 +10,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffff;
+  background: $primaria1;
 
   nav {
     display: flex;
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-    width: 85%;
+    width: 75%;
     height: 2.7rem;
     padding: 1.5rem 0;
   }
@@ -23,19 +27,22 @@ header {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-
-  nav ul li {
-    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
     gap: 1rem;
-    font-weight: $bold;
   }
 
-  nav p {
-    padding: 0.75rem 1rem;
+  li a,
+  p a {
+    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+    background-color: #ffffff;
+    border-radius: 0.3rem;
+    font-weight: $bold;
+    transition: all 0.5s ease-out;
+    text-decoration: none;
+    color: $preto;
+  }
+
+  li a:hover,
+  p a:hover {
     background-color: $primaria1;
-    color: #ffffff;
-    border-radius: 6px;
-    font-weight: $medium;
   }
 }

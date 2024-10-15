@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kid Cash</title>
+    <title>KidCash</title>
+    <link rel="shortcut icon" type="imagex/png" href="assets/images/icon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
@@ -15,24 +16,24 @@
   <body>
     <header>
       <nav>
-        <img src="assets/images/logo.png" alt="logo do site" />
+        <a href="#"><img src="assets/images/logo.png" alt="logo do site" /></a>
         <ul>
-          <li>Conheça</li>
-          <li>Vantagens</li>
-          <li>Dúvidas</li>
-          <li>Garanta</li>
+          <li><a href="#superapp">Conheça</a></li>
+          <li><a href="#vantagens">Vantagens</a></li>
+          <li><a href="#">Dúvidas</a></li>
+          <li><a href="#">Garanta</a></li>
         </ul>
-        <p>Cadastre-se</p>
+        <p><a href="#">Cadastre-se</a></p>
       </nav>
     </header>
 
-    <section class="superapp">
+    <section class="superapp" id="superapp">
       <div class="superapp__content">
         <div class="superapp__title">
           <h1>O Super app da <span>mesada</span></h1>
           <p class="superapp__sayuri">E da @Sayuri também!</p>
           <div class="superapp__aproveite">
-            <p><a href="">Aproveite agora</a></p>
+            <p><a href="#explanation">Aproveite agora</a></p>
             <i class="ri-arrow-right-line"></i>
           </div>
         </div>
@@ -45,7 +46,7 @@
       </div>
     </section>
 
-    <section class="explanation">
+    <section class="explanation" id="explanation">
       <div class="explanation__content">
         <div class="explanation__miguel">
           <div class="explanation__left">
@@ -79,7 +80,9 @@
 
         <div class="explanation__bar">
           <img src="assets/images/Coin.png" alt="ilustração de moeda" />
-          <h2 class="explanation__conta">Conta <span class="explanation__gratuita">Gratuita</span></h2>
+          <h2 class="explanation__conta">
+            Conta <span class="explanation__gratuita">Gratuita</span>
+          </h2>
           <ul>
             <div>
               <i class="ri-checkbox-circle-fill"></i>
@@ -100,7 +103,7 @@
       </div>
     </section>
 
-    <section class="vantagens">
+    <section class="vantagens" id="vantagens">
       <div class="vantagens__content">
         <div class="vantagens__left">
           <h2>Por que escolher o KidCash?</h2>
@@ -167,6 +170,83 @@
             alt="desenho de um macaquinho"
           />
         </div>
+      </div>
+    </section>
+
+    <section class="containermetas">
+      <img
+        src="./assets/images/staryellow.png"
+        alt="Estrela Amarela"
+        class="cartoesimages"
+      />
+      <h2>Defina metas</h2>
+      <p class="containermetas__description">
+        Ensine seu filho a importância de
+        <span class="containermetas__bold">poupar</span> para
+        <span class="containermetas__bold">alcançar seus objetivos</span>.
+      </p>
+      <div class="metas">
+        <div class="metas__item">
+          <i class="ri-add-line"></i>
+          <img
+            src="assets/images/metas/videogame.png"
+            alt="imagem de videogame"
+          />
+        </div>
+        <div class="metas__item">
+          <i class="ri-add-line"></i>
+          <img src="assets/images/metas/bike.png" alt="imagem de bike" />
+        </div>
+        <div class="metas__item">
+          <i class="ri-add-line"></i>
+          <img src="assets/images/metas/boneca.png" alt="imagem de boneca" />
+        </div>
+        <div class="metas__item">
+          <i class="ri-add-line"></i>
+          <img src="assets/images/metas/lapais.png" alt="imagem de lápis" />
+        </div>
+      </div>
+      <div class="containermetas__title">
+        <div>
+          <p class="containermetas__brinquedo">Video game</p>
+          <p class="containermetas__preco">R$200,00</p>
+        </div>
+        <div>
+          <p class="containermetas__brinquedo">Bike</p>
+          <p class="containermetas__preco">R$300,00</p>
+        </div>
+        <div>
+          <p class="containermetas__brinquedo">Boneca</p>
+          <p class="containermetas__preco">R$42,00</p>
+        </div>
+        <div>
+          <p class="containermetas__brinquedo">Lápis de cor</p>
+          <p class="containermetas__preco">R$42,00</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cartoes">
+      <img
+        src="./assets/images/starblue.png"
+        alt="Estrela azul"
+        class="cartoesimages"
+      />
+      <h2>Escolha o cartão</h2>
+      <p class="cartoes__description">Do seu pequeno(a)</p>
+      <div class="cartoes__images">
+        <img
+          src="assets/images/cartao/cartao_sayuri.png"
+          alt="cartão da Sayuri tem um cachorrinho"
+        />
+        <img
+          src="assets/images/cartao/cartao_fabio.png"
+          alt="cartão do Fabio tem um porquinho"
+        />
+        <img
+          src="assets/images/cartao/cartao_thiago.png"
+          alt="cartão do Thiago tem um castorzinho"
+        />
       </div>
     </section>
   </body>

@@ -1,0 +1,90 @@
+.containermetas {
+  text-align: center;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__star {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 4.5rem;
+    font-weight: $bold;
+    margin: 1rem 0;
+  }
+
+  &__description {
+    font-size: 1.75rem;
+    width: 35rem;
+    line-height: 3.15rem;
+    margin: 1.25rem 0;
+  }
+
+  &__bold {
+    font-weight: $bold;
+  }
+
+  &__title {
+    display: flex;
+    gap: 3.5rem;
+    padding-top: 1.5rem;
+    font-weight: $bold;
+
+    p {
+      width: 15rem;
+    }
+  }
+
+  &__brinquedo {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  &__preco {
+    font-size: 1.5rem;
+  }
+}
+
+.metas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    width: 14rem;
+    border: 5px solid $primaria2;
+    border-radius: 1rem;
+    background: #f9f9f9;
+    padding: 1rem;
+  }
+
+  &__item i {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 2rem;
+    color: $primaria2;
+    transition: all 0.5s ease-out;
+  }
+
+  &__item img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  i:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s ease-in-out;
+  }
+}

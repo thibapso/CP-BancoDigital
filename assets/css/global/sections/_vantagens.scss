@@ -26,10 +26,10 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); // Duas colunas
-    grid-template-rows: auto auto; // Duas linhas
-    gap: 2rem; // Espaçamento entre os cards
-    width: 100%; // Para ocupar toda a largura disponível
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
+    gap: 2rem;
+    width: 100%;
   }
 
   &__card {
@@ -42,6 +42,8 @@
     font-weight: $bold;
     height: 11rem;
     width: 13rem;
+    background-color: #ffffff;
+    transition: all 0.5s ease-out;
 
     h3 {
       font-size: 1.2rem;
@@ -50,6 +52,11 @@
     p {
       font-size: 0.95rem;
     }
+  }
+
+  &__card:hover {
+    transform: scale(1.15); 
+    transition: transform .5s ease-out; 
   }
 
   &__mensage {

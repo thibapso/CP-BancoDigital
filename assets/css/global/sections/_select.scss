@@ -15,8 +15,8 @@
   }
 
   &__images {
-     display: flex;
-     gap: 1.3rem;
+    display: flex;
+    gap: 1.3rem;
   }
 
   h2 {
@@ -27,5 +27,12 @@
   img {
     width: 7.3rem;
     height: 8.8rem;
+    transition: all 0.5s ease-out;
   }
+
+  img:hover {
+    transform: scale(1.15); 
+    transition: transform 0.5s ease-out; 
+  }
+
 }
