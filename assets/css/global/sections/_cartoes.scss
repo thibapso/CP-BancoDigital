@@ -2,6 +2,13 @@
   text-align: center;
   margin: 2rem 0;
 
+  &__star {
+    width: 10vw; // 10% da largura da viewport
+    max-width: 100px; // Limita a largura máxima para evitar exageros
+    height: auto; // Mantém a proporção da imagem
+    margin-bottom: 1rem;
+  }
+
   h2 {
     font-size: 4.5rem;
     font-weight: $bold;
@@ -13,21 +20,61 @@
     margin: 2rem 0;
     width: auto;
   }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap; // Permite que as imagens quebrem linha se necessário
+
+    img {
+      width: 24rem;
+      height: 14rem;
+      transition: transform 0.5s ease-out;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 
-.cartoes__images {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
+@media (max-width: 1200px) {
+  .cartoes__star {
+    width: 12vw; // Ajusta a largura para telas maiores que 600px
+    max-width: 120px;
+  }
+}
 
-  img {
-    width: 24rem;
-    height: 14rem;
-    transition: all 0.5s ease-out;
+@media (max-width: 900px) {
+  .cartoes__star {
+    width: 15vw;
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartoes__images {
+    flex-direction: column;
+    align-items: center; // Centraliza as imagens na coluna
+    gap: 1.5rem; // Ajusta o espaçamento para telas menores
+
+    img {
+      width: 80%; // Ajusta a largura das imagens para 80% da tela
+      max-width: 300px; // Define um tamanho máximo para evitar exageros
+      height: auto; // Mantém a proporção das imagens
+    }
   }
 
-  img:hover {
-    transform: scale(1.1);
-    transition: transform 0.5s ease-out;
+  .cartoes__star {
+    width: 20vw; // Aumenta a largura da estrela em telas pequenas
+    max-width: 80px; // Ajusta a largura máxima conforme necessário
+  }
+}
+
+@media (min-width: 1200px) {
+  .cartoes__star {
+    width: 8vw; // Reduz a largura em telas muito grandes
+    max-width: 150px; // Aumenta a largura máxima para telas grandes
   }
 }

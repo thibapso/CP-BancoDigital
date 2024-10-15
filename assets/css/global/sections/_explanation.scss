@@ -3,6 +3,7 @@
   padding: 5rem 0;
   display: flex;
   justify-content: center;
+  overflow: hidden; /* Adiciona para garantir que nada "vaze" */
 
   &__content {
     display: flex;
@@ -10,62 +11,150 @@
     justify-content: space-between;
     align-items: center;
     width: 75%;
+
+    @media (max-width: 1024px) {
+      width: 85%;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
   }
 
   &__title {
-    font-weight: $bold;
-    font-size: 4.5rem;
+    font-weight: bold;
+    font-size: 4rem; /* Tamanho base */
     margin-bottom: 2rem;
+
+    @media (max-width: 1024px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 2.5rem; /* Aumentando um pouco */
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem; /* Tamanho mínimo */
+    }
   }
 
   &__paragraph {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    font-size: 1.75rem;
+    font-size: 1.5rem; /* Tamanho base */
+
+    @media (max-width: 1024px) {
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem; /* Aumentando um pouco */
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1rem; /* Tamanho mínimo */
+      width: 65%;
+    }
   }
 
-  &__paragraph1 {
-    width: 40rem;
-  }
-
+  &__paragraph1,
   &__paragraph2 {
-    width: 38rem;
+    width: 40rem;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
   }
 
   &__miguel {
     display: flex;
     gap: 5rem;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Ajuste para evitar vazamentos */
+    @media (max-width: 768px) {
+      gap: 2rem;
+      overflow: hidden;
+    }
   }
 
   &__left {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+
+    @media (max-width: 1024px) {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__cofre {
     margin: 5rem;
-    height: 22rem;
-    width: 30rem;
+    height: 22rem; /* Tamanho fixo */
+    width: 30rem; /* Tamanho fixo */
+    object-fit: contain; /* Garante que a imagem não distorça */
+
+    @media (max-width: 768px) {
+      height: 18rem;
+      width: 25rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 15rem;
+      width: 20rem;
+    }
   }
 
   &__menino {
-    align-items: center;
-    height: 40rem;
-    width: 38rem;
+    height: 40rem; /* Tamanho fixo */
+    width: 38rem; /* Tamanho fixo */
+    margin-left: 3rem;
     padding-top: 4rem;
+    object-fit: cover; /* Ajusta o tamanho da imagem sem distorção */
+    
+    @media (max-width: 1024px) {
+      height: 35rem;
+      width: 33rem;
+    }
+
+    @media (max-width: 768px) {
+      height: 30rem;
+      width: 28rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 25rem;
+      width: 23rem;
+    }
   }
 
   &__bar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center; /* Alinhamento central */
     align-items: center;
     height: 12.25rem;
     width: 100%;
     background-color: $primaria1;
     color: #ffffff;
-    margin: 0 auto;
-    text-align: center;
+    margin: 2rem auto;
+    text-align: left; /* Alinhamento à esquerda */
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      flex-direction: column; /* Muda a direção para coluna em telas menores */
+      height: auto;
+      padding: 2rem 0;
+    }
   }
 
   &__bar ul {
@@ -74,39 +163,80 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha à esquerda */
     gap: 2rem;
+    width: auto;
+
+    @media (max-width: 768px) {
+      align-items: center; /* Centraliza ainda mais em telas pequenas */
+    }
   }
 
   &__bar ul div {
     display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha o conteúdo do div à esquerda */
   }
 
   &__bar ul li {
-    font-size: 1.5rem;
-    font-weight: $bold;
+    font-size: 1.5rem; /* Tamanho base */
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem; /* Ajuste leve */
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.1rem; /* Tamanho mínimo */
+    }
   }
 
   &__bar i {
     margin-right: 0.5rem;
-    font-size: 1.7rem;
+    font-size: 1.7rem; /* Tamanho base */
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem; /* Ajuste leve */
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.3rem; /* Tamanho mínimo */
+    }
   }
 
   &__bar img {
-    height: 8rem;
-    width: 8rem;
+    height: 8rem; /* Tamanho fixo */
+    width: 8rem; /* Tamanho fixo */
+
+    @media (max-width: 768px) {
+      height: 6rem;
+      width: 6rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 5rem; /* Tamanho mínimo */
+      width: 5rem; /* Tamanho mínimo */
+    }
   }
 
   &__conta {
-    font-size: 4.5rem;
+    font-size: 4rem; /* Tamanho base */
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media (max-width: 768px) {
+      font-size: 3rem; /* Ajuste leve */
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem; /* Tamanho mínimo */
+    }
   }
 
   &__gratuita {
-    font-weight: $bold;
+    font-weight: bold;
   }
 }
 
 .bold {
-  font-weight: $bold;
+  font-weight: bold;
 }

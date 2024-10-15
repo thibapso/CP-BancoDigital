@@ -1,3 +1,7 @@
+// Variáveis (Certifique-se de que estão definidas)
+$bold: 700; // Definição da variável $bold
+$primaria2: #3498db; // Definição da variável $primaria2
+
 .containermetas {
   text-align: center;
   margin: 4rem 0;
@@ -6,7 +10,9 @@
   align-items: center;
 
   &__star {
-    width: 60px;
+    width: 10vw; // 10% da largura da viewport
+    max-width: 100px; // Limita a largura máxima para evitar exageros
+    height: auto; // Mantém a proporção da imagem
     margin-bottom: 20px;
   }
 
@@ -18,7 +24,7 @@
 
   &__description {
     font-size: 1.75rem;
-    width: 35rem;
+    max-width: 35rem; // Utiliza max-width para melhor controle
     line-height: 3.15rem;
     margin: 1.25rem 0;
   }
@@ -29,31 +35,46 @@
 
   &__title {
     display: flex;
-    gap: 3.5rem;
+    justify-content: center; // Adiciona centralização para manter o alinhamento
+    gap: 3.5rem; // Espaçamento entre os itens
     padding-top: 1.5rem;
     font-weight: $bold;
+
+    // Ajuste do espaço interno entre os itens
+    @media (min-width: 616px) {
+      gap: 4rem; // Aumenta o espaçamento para telas acima de 616px
+    }
 
     p {
       width: 15rem;
     }
-  }
-
-  &__brinquedo {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-  }
-
-  &__preco {
-    font-size: 1.5rem;
   }
 }
 
 .metas {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
+  align-items: flex-start; 
+  gap: 2rem; // Espaçamento entre os wrappers
+  flex-wrap: wrap; 
   max-width: 100%;
+
+  &__item-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 14rem; 
+    margin: 1rem; // Aumenta a margem em volta dos wrappers
+
+    @media (max-width: 600px) {
+      width: 12rem;
+    }
+
+    @media (min-width: 332px) and (max-width: 600px) {
+      width: 13rem; 
+      margin-bottom: 2.5rem; // Espaçamento extra na parte inferior
+    }
+  }
 
   &__item {
     position: relative;
@@ -66,25 +87,234 @@
     border-radius: 1rem;
     background: #f9f9f9;
     padding: 1rem;
+    transition: transform 0.3s ease;
+    margin: 0 1rem; // Adiciona uma margem nas laterais para evitar que fiquem colados
+
+    @media (max-width: 600px) {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    @media (min-width: 332px) and (max-width: 600px) {
+      height: 11rem;
+      width: 11rem;
+    }
+
+    @media (min-width: 616px) {
+      margin: 0 2rem; // Aumenta a margem em telas maiores para afastar mais
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    i {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 2rem;
+      color: $primaria2;
+      transition: transform 0.5s ease-in-out;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    img {
+      max-width: 80%;
+      height: auto;
+      width: auto;
+    }
   }
 
-  &__item i {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    font-size: 2rem;
-    color: $primaria2;
-    transition: all 0.5s ease-out;
+  &__info {
+    margin-top: 1rem;
+    text-align: center;
+
+    .containermetas__brinquedo {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      font-weight: $bold;
+    }
+
+    .containermetas__preco {
+      font-size: 1.5rem;
+      color: $primaria2;
+      font-weight: $bold;
+    }
+  }
+}
+
+// Media Queries para Responsividade
+@media (max-width: 1200px) {
+  .containermetas {
+    &__star {
+      width: 12vw;
+      max-width: 120px;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    &__description {
+      font-size: 1.5rem;
+      max-width: 30rem;
+      line-height: 2.8rem;
+    }
   }
 
-  &__item img {
-    max-width: 100%;
-    height: auto;
-    width: auto;
+  .metas {
+    gap: 1.8rem;
+
+    &__item-wrapper {
+      width: 13rem;
+    }
+
+    &__item {
+      height: 13rem;
+      width: 13rem;
+    }
+
+    &__info {
+      .containermetas__brinquedo {
+        font-size: 1.2rem;
+      }
+
+      .containermetas__preco {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .containermetas {
+    &__star {
+      width: 15vw;
+      max-width: 100px;
+    }
+
+    h2 {
+      font-size: 3.5rem;
+    }
+
+    &__description {
+      font-size: 1.25rem;
+      max-width: 25rem;
+      line-height: 2.5rem;
+    }
   }
 
-  i:hover {
-    transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
+  .metas {
+    gap: 1.5rem;
+
+    &__item-wrapper {
+      width: 12rem;
+    }
+
+    &__item {
+      height: 12rem;
+      width: 12rem;
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__info {
+      .containermetas__brinquedo {
+        font-size: 1.15rem;
+      }
+
+      .containermetas__preco {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .containermetas {
+    &__star {
+      width: 20vw;
+      max-width: 80px;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+      max-width: 90%;
+      line-height: 2rem;
+    }
+  }
+
+  .metas {
+    gap: 1rem;
+
+    &__item-wrapper {
+      width: 10rem;
+    }
+
+    &__item {
+      height: 10rem;
+      width: 10rem;
+
+      i {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__info {
+      .containermetas__brinquedo {
+        font-size: 1rem;
+      }
+
+      .containermetas__preco {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Adição de Media Queries Específicas para Larguras de Tela entre 332px e 600px */
+@media (min-width: 332px) and (max-width: 600px) {
+  .metas {
+    gap: 2.5rem; // Aumenta o gap para mais espaçamento entre os itens
+
+    &__item-wrapper {
+      width: 13rem; // Ajusta a largura para evitar que os itens fiquem muito próximos
+      margin-bottom: 2.5rem; // Aumenta a margem inferior para espaçamento extra
+    }
+
+    &__item {
+      height: 11rem;
+      width: 11rem;
+      padding: 0.8rem; // Reduz o padding para melhor ajuste
+
+      border: 4px solid $primaria2; // Reduz a espessura da borda para menos destaque
+
+      &:hover {
+        transform: scale(1.03); // Ajusta a escala no hover para menor efeito
+      }
+
+      i {
+        font-size: 1.8rem;
+      }
+    }
+
+    &__info {
+      .containermetas__brinquedo {
+        font-size: 1.15rem;
+      }
+
+      .containermetas__preco {
+        font-size: 1.3rem;
+      }
+    }
   }
 }

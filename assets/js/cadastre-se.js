@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
       mensagemDiv.style.display = "block"; // Exibir a mensagem
       mensagemDiv.textContent = "Cadastrado com sucesso!"; // Definir o texto da mensagem
 
-      // Aumentar o width da seção ao enviar o formulário
+      // Adiciona a classe para mover a imagem para baixo
       const formSection = document.querySelector(".cadastrar");
-      formSection.classList.add("expandido");
+      formSection.classList.add("move-down"); // Adiciona a classe para mover a imagem para baixo
     });
 });

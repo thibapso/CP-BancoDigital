@@ -1,53 +1,86 @@
 .duvidas {
   display: flex;
+  flex-direction: column; /* Mudança para coluna em telas menores */
   align-items: center;
-  gap: 7rem;
-  padding: 5rem 9rem 5rem 5rem;
-  max-width: 800px;
+  gap: 3rem;
+  padding: 3rem 2rem;
+  max-width: 100%;
   margin: auto;
   border-radius: 10px;
 
+  @media (min-width: 768px) {
+    flex-direction: row; /* Layout em linha para telas maiores */
+    gap: 7rem;
+    padding: 5rem 9rem 5rem 5rem;
+    max-width: 800px;
+  }
+
   h2 {
-    font-size: 60px;
+    font-size: 2.5rem;
     font-weight: $bold;
+
+    @media (min-width: 768px) {
+      font-size: 3.5rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 2rem;
+    }
   }
 
   .perguntas {
     width: 100%;
-  }
 
-  details {
-    margin: 3.5rem 0;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    transition: max-height 0.4s ease; /* Transição suave */
-  }
+    details {
+      margin: 2rem 0;
+      padding: 10px;
+      transition: max-height 0.4s ease; /* Transição suave */
+    }
 
-  summary {
-    font-weight: bold;
-    font-size: 1.25rem;
-    cursor: pointer;
-    padding-right: 40px; /* Aumentar espaço para a seta */
-    position: relative; /* Garantir que a seta fique dentro do sumário */
-    list-style: none; /* Remover marcadores de lista */
-    width: 22rem;
-  }
+    summary {
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      padding-right: 30px;
+      position: relative;
+      list-style: none;
+      width: 100%;
 
-  summary:hover {
-    color: #fdad4c;
-  }
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+        padding-right: 40px;
+      }
+    }
 
-  p {
-    margin: 15px 0 0;
-    font-size: 20px;
-    color: #555;
+    p {
+      margin: 15px 0 0;
+      font-size: 1rem;
+      color: #555;
+
+      @media (min-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
   }
 
   .duvidas__content {
     display: flex;
     flex-direction: column;
-    gap: 6rem;
+    align-items: center;
+    gap: 3rem;
+
+    @media (min-width: 768px) {
+      gap: 6rem;
+    }
+
+    img {
+      max-width: 100%; /* Imagem responsiva */
+      height: auto;
+
+      @media (min-width: 768px) {
+        max-width: 15rem;
+      }
+    }
   }
 
   details summary::after {
@@ -56,9 +89,13 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    transition: transform 0.3s ease; /* Transição suave */
+    transition: transform 0.3s ease;
     color: #c5c5c5;
-    font-size: 1.2rem; /* Aumentar o tamanho do triângulo */
+    font-size: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 
   details[open] summary::after {

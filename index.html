@@ -23,7 +23,7 @@
           <li><a href="#containermetas">Garanta</a></li>
           <li><a href="#duvidas">Dúvidas</a></li>
         </ul>
-        <p><a href="#cadastrar">Cadastre-se</a></p>
+        <p><a href="#cadastrar" class="cadastre-se">Cadastre-se</a></p>
       </nav>
     </header>
 
@@ -138,6 +138,7 @@
         </div>
         <div>
           <img
+            class="vantagens__imagem"
             src="assets/images/AplicativoKidCash.png"
             alt="imagem do aplicativo da KidCash"
           />
@@ -177,7 +178,7 @@
       <img
         src="./assets/images/staryellow.png"
         alt="Estrela Amarela"
-        class="cartoesimages"
+        class="cartoes__star"
       />
       <h2>Defina metas</h2>
       <p class="containermetas__description">
@@ -186,42 +187,51 @@
         <span class="containermetas__bold">alcançar seus objetivos</span>.
       </p>
       <div class="metas">
-        <div class="metas__item">
-          <i class="ri-add-line"></i>
-          <img
-            src="assets/images/metas/videogame.png"
-            alt="imagem de videogame"
-          />
+        <div class="metas__item-wrapper">
+          <div class="metas__item">
+            <i class="ri-add-line"></i>
+            <img
+              src="assets/images/metas/videogame.png"
+              alt="imagem de videogame"
+            />
+          </div>
+          <div class="metas__info">
+            <p class="containermetas__brinquedo">Video game</p>
+            <p class="containermetas__preco">R$200,00</p>
+          </div>
         </div>
-        <div class="metas__item">
-          <i class="ri-add-line"></i>
-          <img src="assets/images/metas/bike.png" alt="imagem de bike" />
+
+        <div class="metas__item-wrapper">
+          <div class="metas__item">
+            <i class="ri-add-line"></i>
+            <img src="assets/images/metas/bike.png" alt="imagem de bike" />
+          </div>
+          <div class="metas__info">
+            <p class="containermetas__brinquedo">Bike</p>
+            <p class="containermetas__preco">R$300,00</p>
+          </div>
         </div>
-        <div class="metas__item">
-          <i class="ri-add-line"></i>
-          <img src="assets/images/metas/boneca.png" alt="imagem de boneca" />
+
+        <div class="metas__item-wrapper">
+          <div class="metas__item">
+            <i class="ri-add-line"></i>
+            <img src="assets/images/metas/boneca.png" alt="imagem de boneca" />
+          </div>
+          <div class="metas__info">
+            <p class="containermetas__brinquedo">Boneca</p>
+            <p class="containermetas__preco">R$42,00</p>
+          </div>
         </div>
-        <div class="metas__item">
-          <i class="ri-add-line"></i>
-          <img src="assets/images/metas/lapais.png" alt="imagem de lápis" />
-        </div>
-      </div>
-      <div class="containermetas__title">
-        <div>
-          <p class="containermetas__brinquedo">Video game</p>
-          <p class="containermetas__preco">R$200,00</p>
-        </div>
-        <div>
-          <p class="containermetas__brinquedo">Bike</p>
-          <p class="containermetas__preco">R$300,00</p>
-        </div>
-        <div>
-          <p class="containermetas__brinquedo">Boneca</p>
-          <p class="containermetas__preco">R$42,00</p>
-        </div>
-        <div>
-          <p class="containermetas__brinquedo">Lápis de cor</p>
-          <p class="containermetas__preco">R$42,00</p>
+
+        <div class="metas__item-wrapper">
+          <div class="metas__item">
+            <i class="ri-add-line"></i>
+            <img src="assets/images/metas/lapais.png" alt="imagem de lápis" />
+          </div>
+          <div class="metas__info">
+            <p class="containermetas__brinquedo">Lápis de cor</p>
+            <p class="containermetas__preco">R$42,00</p>
+          </div>
         </div>
       </div>
     </section>
@@ -230,7 +240,7 @@
       <img
         src="./assets/images/starblue.png"
         alt="Estrela azul"
-        class="cartoesimages"
+        class="cartoes__star"
       />
       <h2>Escolha o cartão</h2>
       <p class="cartoes__description">Do seu pequeno(a)</p>

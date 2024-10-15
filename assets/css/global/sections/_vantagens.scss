@@ -2,26 +2,51 @@
   background-color: $primaria2;
   display: flex;
   justify-content: center;
+  padding: 1rem; // Reduzindo o padding em telas pequenas
 
   &__content {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 75%;
-    gap: 7.75rem;
+    width: 100%; // Ajuste para ocupar a largura total
+    max-width: 1200px; // Limite máximo de largura
+    gap: 2rem; // Ajustando o gap
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem; // Ajustando o gap para telas pequenas
+    }
   }
 
   &__left {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    margin: 5rem 0;
+    gap: 2rem; // Ajustando o gap
+    margin: 2rem 0; // Ajustando a margem
+
+    @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
+      gap: 1rem; // Menor gap em telas pequenas
+      margin: 1rem 0; // Menor margem
+    }
   }
 
   h2 {
-    font-size: 4.5rem;
+    font-size: 3rem; // Ajuste para telas menores
     font-weight: $bold;
-    width: 37rem;
+    width: 100%; // Para evitar vazamento
+
+    @media (max-width: 768px) {
+      font-size: 2.2rem; // Ajustando ainda mais para telas menores
+    }
+  }
+
+  // Aumentando a largura da imagem e ajustando o tamanho
+  img {
+    max-width: 100%; // Para evitar vazamento
+    height: auto; // Mantém a proporção
+    margin: 0 auto; // Centraliza a imagem
   }
 
   &__grid {
@@ -30,6 +55,12 @@
     grid-template-rows: auto auto;
     gap: 2rem;
     width: 100%;
+
+    @media (max-width: 768px) {
+      margin: 1rem -1rem 1rem 1rem;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
   }
 
   &__card {
@@ -45,18 +76,36 @@
     background-color: #ffffff;
     transition: all 0.5s ease-out;
 
+    @media (max-width: 768px) {
+      width: 80%;
+      height: auto;
+      padding: 1.5rem;
+    }
+
     h3 {
       font-size: 1.2rem;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
     }
 
     p {
       font-size: 0.95rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.85rem;
+      }
     }
   }
 
   &__card:hover {
-    transform: scale(1.15); 
-    transition: transform .5s ease-out; 
+    transform: scale(1.15);
+    transition: transform 0.5s ease-out;
+
+    @media (max-width: 768px) {
+      transform: scale(1.05); // Reduzi o efeito de hover em telas pequenas
+    }
   }
 
   &__mensage {
@@ -69,6 +118,15 @@
     height: 2.375rem;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-size: 1.5rem;
+
+    @media (max-width: 1024px) {
+      width: 100%;
+      font-size: 1.3rem;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -80,4 +138,9 @@
   border-radius: 6.25rem;
   padding: 0.5rem;
   width: 1.8rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    width: 1.5rem;
+  }
 }

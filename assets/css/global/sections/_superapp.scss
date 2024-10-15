@@ -1,15 +1,27 @@
 .superapp {
   background-color: $secundaria1;
-  height: 38rem;
+  height: auto; /* Permite que a altura se ajuste ao conteúdo */
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2rem 0; /* Espaçamento adequado */
 
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 90%; /* Aumenta para 90% para dispositivos menores */
+    max-width: 1200px; /* Limita a largura máxima para telas grandes */
+
+    @media (max-width: 1024px) {
+      width: 95%; /* Aumenta para 95% para melhorar a responsividade */
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%; /* Garante que a largura seja 100% em telas pequenas */
+    }
   }
 
   &__title {
@@ -21,8 +33,19 @@
     gap: 4rem;
 
     h1 {
-      width: 27rem;
+      width: 100%; /* Garante que o título use 100% da largura disponível */
+      max-width: 27rem; /* Define uma largura máxima para o título */
+
+      @media (max-width: 1024px) {
+        font-size: 3.5rem;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 2.8rem;
+        text-align: center;
+      }
     }
+
     span {
       font-weight: 700;
     }
@@ -37,7 +60,14 @@
     border-radius: 5rem;
     font-size: 1.5rem;
     font-weight: $bold;
-    width: 18rem;
+    max-width: 80%;
+    max-width: 300px; /* Limite de largura máxima em telas menores */
+
+    @media (max-width: 768px) {
+      font-size: 1.3rem;
+      text-align: center;
+      max-width: 100%; /* Garante que a largura não exceda 100% */
+    }
   }
 
   &__aproveite {
@@ -48,7 +78,11 @@
     font-weight: $bold;
     align-items: center;
     transition: transform 0.5s ease-out, color 0.5s ease-out;
-    transform-origin: left; 
+    transform-origin: left;
+
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
 
     a {
       text-decoration: none;
@@ -63,7 +97,7 @@
 
     &:hover {
       color: $primaria1;
-      transform: scale(1.2); 
+      transform: scale(1.2);
 
       a,
       i {
@@ -74,12 +108,28 @@
 
   &__image {
     position: relative;
-    top: -1rem;
     z-index: 1;
+
     img {
-      max-width: 100%;
-      height: 40rem;
-      margin: 0;
+      max-width: 100%; /* Garante que a imagem não exceda a largura */
+      height: auto; /* Mantém a proporção da imagem */
+      max-height: 40rem; /* Define uma altura máxima para a imagem */
+
+      @media (max-width: 1024px) {
+        max-height: 35rem;
+      }
+
+      @media (max-width: 768px) {
+        max-height: 30rem;
+      }
+
+      @media (max-width: 480px) {
+        max-height: 25rem;
+      }
     }
+  }
+
+  @media (max-width: 768px) {
+    padding: 3rem 0; /* Espaçamento melhorado */
   }
 }

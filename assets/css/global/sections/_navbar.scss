@@ -14,33 +14,112 @@ header {
 
   nav {
     display: flex;
-    justify-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 75%;
-    height: 2.7rem;
+    height: auto; /* Permite que a altura se ajuste ao conteúdo */
     padding: 1.5rem 0;
+
+    @media (max-width: 1024px) {
+      width: 85%;
+    }
+
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column; /* Organiza os itens em coluna */
+      gap: 2rem;
+      align-items: center; /* Centraliza os itens */
+    }
   }
 
   nav ul {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
-    gap: 1rem;
+    margin: 0; /* Remova o margin para que ocupe todo o espaço disponível */
+    gap: 1rem; /* Distribui os itens uniformemente */
+    text-align: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      gap: 1.8rem;
+    }
+
+    @media (max-width: 600px) {
+      flex-direction: column; /* Muda para coluna em telas pequenas */
+      gap: 1.8rem;
+      align-items: center; /* Centraliza os itens da lista */
+    }
   }
 
-  li a, p a {
-    padding: 0.6rem 0.8rem 0.6rem 0.8rem;
+  li a {
+    padding: 0.6rem 0.8rem; /* Padding para os links da lista */
     background-color: #ffffff;
     border-radius: 0.3rem;
     font-weight: $bold;
     transition: all 0.5s ease-out;
     text-decoration: none;
     color: $preto;
+    font-size: 1rem; /* Tamanho base da fonte */
+
+    @media (max-width: 768px) {
+      font-size: 0.9rem; /* Diminui o tamanho da fonte em telas menores */
+      padding: 0.5rem 0.7rem; /* Ajusta o padding */
+    }
+
+    @media (max-width: 600px) {
+      font-size: 0.85rem; /* Diminui ainda mais em telas muito pequenas */
+      width: 100%; /* Garante que o link ocupe toda a largura */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    &:hover {
+      background-color: $primaria1; /* Muda a cor de fundo ao passar o mouse */
+    }
   }
 
-  li a:hover, p a:hover {
-    background-color: $primaria1;
+  p {
+    background-color: #ffffff;
+    padding: 0.7rem 0;
+    border-radius: 0.3rem;
+  }
+
+  .cadastre-se {
+    padding: 0.6rem 1.2rem; /* Aumenta o padding para o botão Cadastre-se */
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 0.3rem;
+    font-weight: $bold;
+    transition: all 0.5s ease-out;
+    text-decoration: none; /* Remove a decoração do texto */
+    color: $preto; /* Cor do texto preta */
+    font-size: 1rem; /* Tamanho base da fonte */
+    white-space: nowrap; /* Garante que o texto não quebre em múltiplas linhas */
+    
+    @media (max-width: 768px) {
+      font-size: 0.9rem; /* Diminui o tamanho da fonte em telas menores */
+      padding: 0.5rem 1rem; /* Ajusta o padding */
+    }
+
+    @media (max-width: 600px) {
+      font-size: 0.85rem; /* Diminui ainda mais em telas muito pequenas */
+      width: 100%; /* Garante que o link ocupe toda a largura */
+      text-align: center; /* Centraliza o texto */
+    }
+
+    &:hover {
+      background-color: $primaria1; /* Muda a cor de fundo ao passar o mouse */
+    }
+  }
+
+  img {
+    max-width: 100%; /* Garante que a imagem do logo não exceda a largura */
+    height: auto;
+
+    @media (max-width: 600px) {
+      width: 120px; /* Ajusta o tamanho do logo em telas menores */
+    }
   }
 }
