@@ -72,7 +72,7 @@
 
   &__miguel {
     display: flex;
-    gap: 5rem;
+    gap: 0;
     position: relative;
 
     @media (max-width: 1024px) {
@@ -91,6 +91,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin-left: 3rem;
 
     @media (max-width: 1024px) {
       align-items: center;
