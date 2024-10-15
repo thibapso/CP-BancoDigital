@@ -1,0 +1,75 @@
+.duvidas {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+  padding: 5rem 9rem 5rem 5rem;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 10px;
+
+  h2 {
+    font-size: 60px;
+    font-weight: $bold;
+  }
+
+  .perguntas {
+    width: 100%;
+  }
+
+  details {
+    margin: 3.5rem 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    transition: max-height 0.4s ease; /* Transição suave */
+  }
+
+  summary {
+    font-weight: bold;
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding-right: 40px; /* Aumentar espaço para a seta */
+    position: relative; /* Garantir que a seta fique dentro do sumário */
+    list-style: none; /* Remover marcadores de lista */
+    width: 22rem;
+  }
+
+  summary:hover {
+    color: #fdad4c;
+  }
+
+  p {
+    margin: 15px 0 0;
+    font-size: 20px;
+    color: #555;
+  }
+
+  .duvidas__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+  }
+
+  details summary::after {
+    content: "\25B6"; /* Código da seta para a direita */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease; /* Transição suave */
+    color: #c5c5c5;
+    font-size: 1.2rem; /* Aumentar o tamanho do triângulo */
+  }
+
+  details[open] summary::after {
+    transform: rotate(90deg) translateY(-50%);
+  }
+
+  details[open] {
+    max-height: 500px; /* Altura ajustável para o conteúdo aberto */
+  }
+
+  details:not([open]) {
+    max-height: 50px; /* Altura ajustável para o conteúdo fechado */
+  }
+}

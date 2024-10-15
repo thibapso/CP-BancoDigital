@@ -30,8 +30,7 @@ header {
     gap: 1rem;
   }
 
-  li a,
-  p a {
+  li a, p a {
     padding: 0.6rem 0.8rem 0.6rem 0.8rem;
     background-color: #ffffff;
     border-radius: 0.3rem;
@@ -41,8 +40,7 @@ header {
     color: $preto;
   }
 
-  li a:hover,
-  p a:hover {
+  li a:hover, p a:hover {
     background-color: $primaria1;
   }
 }

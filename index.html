@@ -20,10 +20,10 @@
         <ul>
           <li><a href="#superapp">Conheça</a></li>
           <li><a href="#vantagens">Vantagens</a></li>
-          <li><a href="#">Dúvidas</a></li>
-          <li><a href="#">Garanta</a></li>
+          <li><a href="#containermetas">Garanta</a></li>
+          <li><a href="#duvidas">Dúvidas</a></li>
         </ul>
-        <p><a href="#">Cadastre-se</a></p>
+        <p><a href="#cadastrar">Cadastre-se</a></p>
       </nav>
     </header>
 
@@ -173,7 +173,7 @@
       </div>
     </section>
 
-    <section class="containermetas">
+    <section class="containermetas" id="containermetas">
       <img
         src="./assets/images/staryellow.png"
         alt="Estrela Amarela"
@@ -249,5 +249,137 @@
         />
       </div>
     </section>
+
+    <section class="duvidas" id="duvidas">
+      <div class="duvidas__content">
+        <h2>Dúvidas</h2>
+        <div class="imagem">
+          <img src="./assets/images/cedula.png" alt="imagem de cédula" />
+        </div>
+      </div>
+
+      <div class="perguntas">
+        <details>
+          <summary>O que a conta KidCash oferece?</summary>
+          <hr />
+          <p>
+            A conta KidCash oferece uma plataforma segura para gerenciar
+            finanças, ensino sobre economia, ferramentas para poupança e
+            transações simplificadas.
+          </p>
+        </details>
+        <details>
+          <summary>Como faço para abrir uma conta?</summary>
+          <hr />
+          <p>
+            Para abrir uma conta KidCash, basta acessar o site, preencher o
+            formulário de inscrição e enviar os documentos solicitados.
+          </p>
+        </details>
+        <details>
+          <summary>
+            Quais documentos são necessários para abrir uma conta?
+          </summary>
+          <hr />
+          <p>
+            Para abrir uma conta, você precisa de um documento seu, como a
+            certidão de nascimento, e um documento do seu responsável.
+          </p>
+        </details>
+        <details>
+          <summary>Qual a idade para abrir conta?</summary>
+          <hr />
+          <p>De 0 a 12 anos :)</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="cadastrar" id="cadastrar">
+      <form id="formulario">
+        <fieldset>
+          <legend>Cadastre-se</legend>
+          <p>para receber mais informações</p>
+          <input type="text" id="nome" placeholder="Nome" required />
+          <input type="text" id="sobrenome" placeholder="Sobrenome" required />
+          <input
+            type="email"
+            id="email"
+            placeholder="E-mail do responsável"
+            required
+          />
+        </fieldset>
+        <input type="submit" id="registrar" value="Registrar" />
+      </form>
+
+      <div class="mensagem">Cadastrado com sucesso!</div>
+
+      <div class="saco">
+        <img src="./assets/images/money.png" alt="saco de dinheiro" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer__content">
+        <div class="footer_logo">
+          <a href="#"
+            ><img class="logo" src="./assets/images/logo_fim.png" alt="KitCash"
+          /></a>
+        </div>
+
+        <div class="footer_logoSocial">
+          <a href="https://www.youtube.com/" target="_blank">
+            <img
+              class="logo"
+              src="assets/images/social/youtube.png"
+              alt="Youtube"
+            />
+          </a>
+
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              class="logo"
+              src="assets/images/social/facebook.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              class="logo"
+              src="assets/images/social/instagram.png"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://br.linkedin.com/" target="_blank">
+            <img
+              class="logo"
+              src="assets/images/social/linkedin.png"
+              alt="LinkedIn"
+            />
+          </a>
+        </div>
+
+        <div class="footer">
+          <ul>
+            <li class="footer_item">
+              <a href="#superapp">Conheça</a>
+            </li>
+
+            <li class="footer_item">
+              <a href="#vantagens">Vantagens</a>
+            </li>
+
+            <li class="footer_item">
+              <a href="#containermetas">Garanta</a>
+            </li>
+
+            <li class="footer_item">
+              <a href="#duvidas">Dúvidas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/cadastre-se.js"></script>
   </body>
 </html>

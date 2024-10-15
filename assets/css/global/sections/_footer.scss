@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+}
+
+footer {
+  background: #fdad4c;
+  display: flex; // Adiciona flex ao footer para centralizar o conteúdo
+  justify-content: center; // Garante que o conteúdo do footer fique centralizado
+  width: 100%; // O footer ocupa 100% da largura da tela
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between; // Distribui o conteúdo da div
+    align-items: center;
+    width: 70%;
+    padding: 5rem 9rem;
+  }
+}
+
+.footer_logoSocial {
+  filter: brightness(0) invert(1); // Filtro padrão
+  display: flex;
+  gap: 15px;
+
+  a {
+    transition: all 0.3s ease;
+
+    &:hover {
+      filter: brightness(1.5); // Aumenta o brilho ao passar o mouse
+      transform: scale(1.1); // Aumenta ligeiramente o tamanho do ícone
+    }
+
+    img {
+      width: 40px; // Ajuste de tamanho se necessário
+      height: auto;
+    }
+  }
+}
+
+.footer_item {
+  margin: 0 15px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff; // Cor padrão dos links
+  font-weight: 700;
+  font-size: 1.3rem;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    color: $secundaria2; // Aplica a cor secundaria2 ao texto no hover
+    transform: scale(1.1); // Aumenta o tamanho do link no hover
+    text-decoration: none;
+  }
+}
+
+ul {
+  display: flex;
+  gap: 30px;
+}
+  
